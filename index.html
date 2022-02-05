@@ -8,7 +8,7 @@
     <meta name="author" content="Harmeet Matharoo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     
@@ -17,10 +17,69 @@
     <div class="sign-up-div">
         <div class="left"></div>
         <div class="content-div">
-            <p class="content">.</p>
+            <div class="logo-div">
+                <img class="logo-img" src="images/add-user1.png" alt="logo">
+            </div>
+            <div class="content">
+                <h1>Welcome!</h1>
+                <p>Create an account or Log-in</p>
+
+                <div class="form-div">
+                    <div class="form-inner-div">
+                        <form action="#" method="get">
+                            
+                            
+                            <div class="shadow-break">
+                                <div class="first-last-name">
+                                    <div>
+                                        <div><label for="first_name">First Name:</label></div>
+                                        <div><input type="text" name="first_name" id="first_name"></div>
+                                    </div>
+                                    <div>
+                                        <div><label for="last_name">Last Name:</label></div>
+                                        <div><input type="text" name="last_name" id="last_name"></div>
+                                    </div>
+                                </div>
+                                <div class="email-phone">
+                                    <div>
+                                        <div><label for="email">Email:</label></div>
+                                        <div><input type="email" id="email" name="email"></div>
+                                    </div>
+                                    <div>
+                                        <div><label for="phone_number">Phone Number:</label></div>
+                                        <div><input type="tel" id="phone_number" name="phone_number"></div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <div class="pass-confirm">
+                                    <div>
+                                        <div><label for="user_password">*Password:</label></div>
+                                        <div><input type="password" id="user_password" name="user_password" required></div>
+                                    </div>
+                                    <div>
+                                        <div><label for="user_password_confirm">*Confirm Password:</label></div>
+                                        <div><input type="password" id="user_password_confirm" name="user_password_confirm" required></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <p>Already have an account? Log in</p>
+                    
+                </div>
+
+            </div>
         </div>
         <div class="right">
             <img src="images/image-bg.jpg" alt="image">
+
+            <!-- Pawel Czerwinski -->
         </div>
        
     </div>
