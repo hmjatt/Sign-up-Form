@@ -12,7 +12,6 @@ body {
     background-color: #2d3436;
     background-image: linear-gradient(to bottom right, rgb(249 250 250), rgb(129 136 144));
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
 
 }
@@ -42,12 +41,13 @@ body {
 .content-div {
     display: flex;
     flex-direction: column;
-    width: 777px;
     height: 840px;
     padding-left: 50px;
     padding-right: 100px;
     background-color: rgb(248, 248, 248);
+    transition: 0.5s;
 }
+
 
 
 
@@ -121,17 +121,27 @@ button {
     margin-top: 20px;
 }
 
+#first_name, #email, #user_password {
+    margin-right: 80px;
+    transition: 0.5s;
+}
+
+.spacing {
+    padding-top: 30px;
+}
 
 .first-last-name {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    flex-wrap: wrap;
+    
 
 }
 .email-phone {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    flex-wrap: wrap;
+   
 
 }
 
@@ -139,7 +149,8 @@ button {
 .pass-confirm {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    flex-wrap: wrap;
+    
 
 }
 
@@ -149,6 +160,8 @@ footer {
     padding-left: 50px;
     color: rgb(126, 126, 126);
     font-family: 'Space Mono', monospace;
+    
+    transition: 0.5s;
 }
 
 
@@ -182,6 +195,7 @@ a:hover {
 img {
     height: 840px;
     width: 450px;
+
 }
 
 
@@ -190,3 +204,73 @@ img {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 1300px) {
+    .content-div {
+  
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    footer {
+        margin-top: -80px;
+        width: 550px;
+    }
+
+    #first_name, #email, #user_password {
+        margin-right: 10px;
+
+    }
+}    
+
+@media only screen and (max-width: 1100px) {
+    .right {
+        display: none;
+    }
+    
+    .content-div {
+        height: 1100px;
+        padding-right: 50px;
+    }
+    .left {
+        height: 1100px;
+    }
+    html {
+        height: 1225px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    footer {
+        width: 375px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+
+    footer {
+        padding:0px;
+    }
+    .content-div {
+        padding-right: 0px;
+    }
+
+    html {
+        
+        width: 100vw;
+    }
+    .content{
+        padding-left: 40px;
+    }
+    button {
+        margin-left: 10px;
+    }
+
+    .have-account {
+        margin-left: -15px;
+    }
+
+    .copyright, .attribute {
+        padding-left: 30px;
+    }
+}
