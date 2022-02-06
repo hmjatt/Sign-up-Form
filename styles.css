@@ -123,7 +123,11 @@ button {
 
 #first_name, #email, #user_password {
     margin-right: 80px;
-    transition: 0.5s;
+    transition: 0.3s;
+}
+
+#last_name, #phone_number, #user_password_confirm {
+    transition: 0.3s;
 }
 
 .spacing {
