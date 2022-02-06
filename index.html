@@ -8,7 +8,7 @@
     <meta name="author" content="Harmeet Matharoo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     
@@ -28,26 +28,26 @@
                     <div class="form-inner-div">
                         <form action="#" method="get">
                             
-                            
-                            <div class="shadow-break">
+                            <div class="form-bg">
+
                                 <div class="first-last-name">
                                     <div>
                                         <div><label for="first_name">First Name:</label></div>
-                                        <div><input type="text" name="first_name" id="first_name"></div>
+                                        <div><input type="text" name="first_name" id="first_name" placeholder="John"></div>
                                     </div>
                                     <div>
                                         <div><label for="last_name">Last Name:</label></div>
-                                        <div><input type="text" name="last_name" id="last_name"></div>
+                                        <div><input type="text" name="last_name" id="last_name" placeholder="Doe"></div>
                                     </div>
                                 </div>
                                 <div class="email-phone">
                                     <div>
                                         <div><label for="email">Email:</label></div>
-                                        <div><input type="email" id="email" name="email"></div>
+                                        <div><input type="email" id="email" name="email" placeholder="example@example.com"></div>
                                     </div>
                                     <div>
                                         <div><label for="phone_number">Phone Number:</label></div>
-                                        <div><input type="tel" id="phone_number" name="phone_number"></div>
+                                        <div><input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"></div>
                                     </div>
                                 </div>
                                 
@@ -62,7 +62,10 @@
                                         <div><input type="password" id="user_password_confirm" name="user_password_confirm" required></div>
                                     </div>
                                 </div>
+
                             </div>
+            
+                            
 
                             <div>
                                 <button type="submit">Create Account</button>
@@ -70,21 +73,51 @@
                         </form>
                     </div>
 
-                    <p>Already have an account? Log in</p>
+                    <h3 class="have-account">Already have an account? 
+                        <a class="login" href="#">Log in</a>    
+                    </h3>
                     
                 </div>
 
+                
+                
+                
             </div>
         </div>
         <div class="right">
-            <img src="images/image-bg.jpg" alt="image">
+            <img src="images/bg-img.jpg" alt="image">
 
-            <!-- Pawel Czerwinski -->
         </div>
        
     </div>
- 
+    
+    <footer>
+        <div class="copyright">
+            
+            <p>
+                Harmeet Matharoo <span>&copy</span> 2022 &nbsp; | &nbsp;
+                <a class="github-link" href="https://github.com/hmjatt" alt="github">GitHub</a>
+                
+            </p>
+        </div>
 
+        <div class=attribute>
+            <p>
+
+            </p>
+            <p>
+                Add icons created by 
+                <a href="https://www.flaticon.com/free-icons/add" title="add icons">Freepik</a>
+                on 
+                <a href="https://www.flaticon.com/" title="flaticon">Flaticon</a>
+           
+                &nbsp; | &nbsp;Photo by 
+                <a href="https://unsplash.com/@pawel_czerwinski" title="photo author">Pawel Czerwinski</a>
+                on 
+                <a href="https://unsplash.com/photos/g0eRErPBoTA" title="photo author">Unsplash</a>
+            </p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
