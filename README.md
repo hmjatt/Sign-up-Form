@@ -1,9 +1,11 @@
 # Sign-up Form
 
 
+![This is an image](https://raw.githubusercontent.com/hmjatt/Sign-up-Form/main/images/sign-up-form-screenshot.jpg)
+
 [Live Demo](https://hmjatt.github.io/Sign-up-Form/)
 
-A sign-up form for ______. Feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
+A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
 
 ### Technologies Used 
 
