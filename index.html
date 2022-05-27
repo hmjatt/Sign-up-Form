@@ -33,17 +33,20 @@
                                 <div class="first-last-name">
                                     <div class="spacing">
                                         <div><label for="first_name">First Name:</label></div>
-                                        <div><input type="text" name="first_name" id="first_name" placeholder="John"></div>
+                                        <div><input type="text" name="first_name" id="first_name" maxlength="128" placeholder="John"></div>
                                     </div>
                                     <div class="spacing">
                                         <div><label for="last_name">Last Name:</label></div>
-                                        <div><input type="text" name="last_name" id="last_name" placeholder="Doe"></div>
+                                        <div><input type="text" name="last_name" id="last_name" maxlength="128" placeholder="Doe"></div>
                                     </div>
                                 </div>
                                 <div class="email-phone">
                                     <div class="spacing">
-                                        <div><label for="email">Email:</label></div>
-                                        <div><input type="email" id="email" name="email" placeholder="example@example.com"></div>
+                                        <div><label for="mail">Email:</label></div>
+                                        <div id="emailVal">
+											<input type="email" id="mail" name="mail" required minlength="8" placeholder="example@example.com">
+											<span class="error" id="error" aria-live="polite"></span>
+										</div>
                                     </div>
                                     <div class="spacing">
                                         <div><label for="phone_number">Phone Number:</label></div>

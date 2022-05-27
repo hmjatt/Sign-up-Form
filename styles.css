@@ -121,7 +121,7 @@ button {
     margin-top: 20px;
 }
 
-#first_name, #email, #user_password {
+#first_name, #mail, #user_password {
     margin-right: 80px;
     transition: 0.3s;
 }
@@ -138,17 +138,30 @@ button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
-
 }
 .email-phone {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-   
-
 }
 
+.error {
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+	padding: 0;
+	font-size: 80%;
+	color: white;
+	background-color: #900;
+	border-radius: 0 0 5px 5px;
+	box-sizing: border-box;
+}
+
+#emailVal {
+	display: flex;
+	flex-direction: column;
+	height: 70px;
+}
 
 .pass-confirm {
     display: flex;
@@ -219,7 +232,7 @@ img {
         width: 550px;
     }
 
-    #first_name, #email, #user_password {
+    #first_name, #mail, #user_password {
         margin-right: 10px;
 
     }
