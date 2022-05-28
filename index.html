@@ -33,18 +33,18 @@
                                 <div class="first-last-name">
                                     <div class="spacing">
                                         <div><label for="first_name">First Name:</label></div>
-                                        <div><input type="text" name="first_name" id="first_name" maxlength="128" placeholder="John"></div>
+                                        <div><input type="text" name="first_name" id="first_name" maxlength="128" minlength="1" placeholder="John"></div>
                                     </div>
                                     <div class="spacing">
                                         <div><label for="last_name">Last Name:</label></div>
-                                        <div><input type="text" name="last_name" id="last_name" maxlength="128" placeholder="Doe"></div>
+                                        <div><input type="text" name="last_name" id="last_name" maxlength="128"  minlength="1" placeholder="Doe"></div>
                                     </div>
                                 </div>
                                 <div class="email-phone">
                                     <div class="spacing">
                                         <div><label for="mail">Email:</label></div>
                                         <div id="emailVal">
-											<input type="email" id="mail" name="mail" required minlength="8" placeholder="example@example.com">
+											<input type="email" id="mail" name="mail" required minlength="8" maxlength="256" placeholder="example@example.com">
 											<span class="error" id="error" aria-live="polite"></span>
 										</div>
                                     </div>
@@ -56,9 +56,20 @@
                                 
                             
                                 <div class="pass-confirm">
-                                    <div class="spacing">
+                                    <div class="spacing" id="usrPwd">
                                         <div><label for="user_password">*Password:</label></div>
-                                        <div><input type="password" id="user_password" name="user_password" required></div>
+                                        <div>
+										<input type="password" id="user_password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+										</div>
+
+										<div id="message">
+											<h3 id="pwdMsg">Password must contain the following:</h3>
+											<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+											<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+											<p id="number" class="invalid">A <b>number</b></p>
+											<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+										</div>
+
                                     </div>
                                     <div class="spacing">
                                         <div><label for="user_password_confirm">*Confirm Password:</label></div>
@@ -68,7 +79,7 @@
 
                             </div>
             
-                            
+							
 
                             <div>
                                 <button type="submit">Create Account</button>

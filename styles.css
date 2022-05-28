@@ -32,7 +32,7 @@ body {
 
 .left {
     width: 20px;
-    height: 840px;
+    height: 900px;
     background-color:  rgb(4, 116, 97);
 }
 
@@ -41,14 +41,12 @@ body {
 .content-div {
     display: flex;
     flex-direction: column;
-    height: 840px;
+    height: 900px;
     padding-left: 50px;
     padding-right: 100px;
     background-color: rgb(248, 248, 248);
     transition: 0.5s;
 }
-
-
 
 
 .logo-img {
@@ -61,6 +59,8 @@ body {
 .content {
     padding-left: 50px;
     font-family: 'Space Mono', monospace;
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -104,7 +104,7 @@ input:invalid {
 }
 
 button {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     height: 70px;
     width: 230px;
@@ -148,27 +148,75 @@ button {
 .error {
 	display: none;
 	margin-top: 10px;
-	width: 100%;
+	/* margin-right: 10px; */
+	width: 85%;
 	padding: 0;
 	font-size: 80%;
-	color: white;
-	background-color: #900;
-	border-radius: 0 0 5px 5px;
-	box-sizing: border-box;
+	color: rgb(185, 1, 1);
+	/* background-color: #900; */
+	/* border-radius: 0 0 5px 5px;
+	box-sizing: border-box; */
 }
 
 #emailVal {
 	display: flex;
 	flex-direction: column;
-	height: 70px;
+	align-items: center;
+	height: 50px;
 }
 
 .pass-confirm {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+}
 
+/* password error msg */
+
+#usrPwd {
+	display: flex;
+	flex-direction: column;
+}
+
+#pwdMsg {
+	margin: 0px;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+
+#message {
+	display: none;
+	background: rgb(248, 248, 248);
+	color: #000;
+	position: relative;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+#message p {
+	font-size: 13px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+	color: green;
+}
+
+.valid:before {
+	position: relative;
+	/* left: -35px; */
+	content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+	color: rgb(185, 1, 1);
+}
+
+.invalid:before {
+	position: relative;
+	/* left: -35px; */
+	content: "✖";
 }
 
 footer {
@@ -210,7 +258,7 @@ a:hover {
 }
 
 img {
-    height: 840px;
+    height: 900px;
     width: 450px;
 
 }
@@ -236,6 +284,10 @@ img {
         margin-right: 10px;
 
     }
+
+	/* .pass-confirm {
+		margin-bottom: 50px;
+	} */
 }    
 
 @media only screen and (max-width: 1100px) {
@@ -253,6 +305,22 @@ img {
     html {
         height: 1225px;
     }
+	
+	.logo-img {
+		padding:  0px;
+		margin-top: 15px;
+	}
+
+	.content {
+		margin-top: 100px;
+	}
+
+}
+
+@media only screen and (max-width: 685px) {
+	.content {
+		margin-top: 0;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -260,6 +328,8 @@ img {
     footer {
         width: 375px;
     }
+
+	
 }
 
 @media only screen and (max-width: 430px) {
@@ -270,7 +340,12 @@ img {
     }
     .content-div {
         padding-right: 0px;
+		/* height: 1200px; */
     }
+
+	/* .left {
+        height: 1200px;
+    } */
 
     html {
         
