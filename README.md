@@ -13,7 +13,7 @@ A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://
 
 ### Updates made to old project
 
-1. Form Validation with JavaScript
+1. Client-Side Form Validation with JavaScript
 
 2. Custom error messages with validation
 
@@ -21,7 +21,11 @@ A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://
 
 4. REGEX validation for Name, Phone, Email, Password, Confirm Password
 
-5. Min & Max Length validation for Name, Email, Password, Confirm Password
+5. Min & Max Length validation for Name, Phone, Email, Password, Confirm Password
+
+6. Name and Phone number support for international Names and Phone numbers
+
+7. Client-Side Form Validation with JavaScript is not a substitute for Server-Side Validation
 
 
 
@@ -40,6 +44,8 @@ A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://
 5. Stack Overflow
 	- [List of standard lengths for database fields](https://stackoverflow.com/questions/20958/list-of-standard-lengths-for-database-fields)
 	- [Validating First and Last Name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name)
+	- [Validating Phone Number(kuzey beytar)](https://stackoverflow.com/questions/4338267/validate-phone-number-with-javascript)
+
 
 
 #### Quote
