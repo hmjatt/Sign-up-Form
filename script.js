@@ -1,6 +1,11 @@
 // Sign-up Form
 
 
+
+
+
+
+
 //for email validation
 
 // There are many ways to pick a DOM node; here we get the form itself and the email
@@ -153,3 +158,84 @@ confirmPass.addEventListener('keyup', (e) => {
     }
 });
 
+
+
+//for first name, last name and phone validation 
+
+const firstName = document.getElementById('first_name');
+const firstNameVal = document.getElementById('firstNameVal');
+const lastName = document.getElementById('last_name');
+const lastNameVal = document.getElementById('lastNameVal');
+// const phone = document.getElementById('phone_number');
+// const phoneNumberVal = document.getElementById('phoneNumberVal');
+
+function validateForm() {
+	firstNameVal.innerText = firstName.validationMessage;
+	firstNameVal.classList.remove("valid");
+	firstNameVal.classList.add("invalid");
+
+	lastNameVal.innerText = lastName.validationMessage;
+	lastNameVal.classList.remove("valid");
+	lastNameVal.classList.add("invalid");
+
+	firstName.addEventListener('input', function (event) {
+		// Each time the user types something, we check if the
+		// form fields are valid.
+
+		if (firstName.validity.valid) {
+			// In case there is an error message visible, if the field
+			// is valid, we remove the error message.
+			firstNameVal.innerHTML = 'Valid First Name'; // Reset the content of the message
+			firstNameVal.classList.remove("invalid");
+			firstNameVal.classList.add("valid");
+			firstNameVal.style.color = 'green';
+			// firstNameVal.className = 'error'; // Reset the visual state of the message
+		} else {
+			// If there is still an error, show the correct error
+			firstNameVal.innerHTML = firstName.validationMessage;
+			firstNameVal.classList.remove("valid");
+			firstNameVal.classList.add("invalid");
+			firstNameVal.style.color = 'rgb(185, 1, 1)';
+		}
+	});
+
+	lastName.addEventListener('input', function (event) {
+		// Each time the user types something, we check if the
+		// form fields are valid.
+
+		if (lastName.validity.valid) {
+			// In case there is an error message visible, if the field
+			// is valid, we remove the error message.
+			lastNameVal.innerHTML = 'Valid Last Name'; // Reset the content of the message
+			lastNameVal.classList.remove("invalid");
+			lastNameVal.classList.add("valid");
+			lastNameVal.style.color = 'green';
+
+		} else {
+			// If there is still an error, show the correct error
+			lastNameVal.innerHTML = lastName.validationMessage;
+			lastNameVal.classList.remove("valid");
+			lastNameVal.classList.add("invalid");
+			lastNameVal.style.color = 'rgb(185, 1, 1)';
+		}
+	});
+
+
+
+	// if (firstName.validity.valid || lastName.validity.valid) {
+	// 	firstNameVal.classList.remove('invalid');
+	// 	firstNameVal.classList.add('valid');
+	// 	lastNameVal.classList.remove('invalid');
+	// 	lastNameVal.classList.add('valid');
+	// 	submit.disabled = false;
+	// 	// return true;
+	// }
+		
+	
+
+	// console.log(firstName.checkValidity());
+	// phoneNumberVal.innerText = phone.validationMessage;
+	// error.innerText = email.validationMessage;
+}
+
+validateForm();

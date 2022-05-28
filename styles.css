@@ -145,23 +145,62 @@ button:disabled {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+
+/* for first and last name */
+
+#first_name, #last_name {
+	display: flex;
+	flex-direction: column;
+}
+
+#firstNameVal, #lastNameVal {
+	font-size: 12px;
+	color: rgb(185, 1, 1);
+	margin-left: 5px;
+}
+
+
+
 .email-phone {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
+/* for phone */
+
+.validity {
+	font-size: 13px;
+	/* margin-left: 5px; */
+}
+
+#phoneVal {
+	display: flex;
+	flex-direction: column;
+}
+
+#phoneVal input:invalid+span:before {
+	content: "✖";
+	padding-right: 5px;
+	color: rgb(185, 1, 1);
+}
+
+#phoneVal input:valid+span:before {
+	content: "✔";
+	padding-right: 5px;
+	color: #009000;
+}
+
+/* for email */
+
 .error {
 	display: none;
 	margin-top: 10px;
-	/* margin-right: 10px; */
 	width: 85%;
 	padding: 0;
 	font-size: 80%;
 	color: rgb(185, 1, 1);
-	/* background-color: #900; */
-	/* border-radius: 0 0 5px 5px;
-	box-sizing: border-box; */
 }
 
 #emailVal {
@@ -210,7 +249,7 @@ button:disabled {
 
 .valid:before {
 	position: relative;
-	/* left: -35px; */
+	padding-right: 5px;
 	content: "✔";
 }
 
@@ -221,7 +260,7 @@ button:disabled {
 
 .invalid:before {
 	position: relative;
-	/* left: -35px; */
+	padding-right: 5px;
 	content: "✖";
 }
 
@@ -236,7 +275,6 @@ footer {
     padding-left: 50px;
     color: rgb(126, 126, 126);
     font-family: 'Space Mono', monospace;
-    
     transition: 0.5s;
 }
 
@@ -296,9 +334,6 @@ img {
 
     }
 
-	/* .pass-confirm {
-		margin-bottom: 50px;
-	} */
 }    
 
 @media only screen and (max-width: 1100px) {
@@ -339,8 +374,6 @@ img {
     footer {
         width: 375px;
     }
-
-	
 }
 
 @media only screen and (max-width: 430px) {
@@ -351,15 +384,9 @@ img {
     }
     .content-div {
         padding-right: 0px;
-		/* height: 1200px; */
     }
 
-	/* .left {
-        height: 1200px;
-    } */
-
     html {
-        
         width: 100vw;
     }
     .content{

@@ -33,11 +33,17 @@
                                 <div class="first-last-name">
                                     <div class="spacing">
                                         <div><label for="first_name">First Name:</label></div>
-                                        <div><input type="text" name="first_name" id="first_name" maxlength="128" minlength="1" placeholder="John" required></div>
+                                        <div>
+											<input type="text" name="first_name" id="first_name" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$" maxlength="128" minlength="1" placeholder="John" required>
+											<span id="firstNameVal"></span>
+										</div>
                                     </div>
                                     <div class="spacing">
                                         <div><label for="last_name">Last Name:</label></div>
-                                        <div><input type="text" name="last_name" id="last_name" maxlength="128"  minlength="1" placeholder="Doe" required></div>
+                                        <div>
+											<input type="text" name="last_name" id="last_name" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$" maxlength="128"  minlength="1" placeholder="Doe" required>
+											<span id="lastNameVal"></span>
+										</div>
                                     </div>
                                 </div>
                                 <div class="email-phone">
@@ -48,9 +54,12 @@
 											<span class="error" id="error" aria-live="polite"></span>
 										</div>
                                     </div>
-                                    <div class="spacing">
+                                    <div class="spacing" >
                                         <div><label for="phone_number">Phone Number:</label></div>
-                                        <div><input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required></div>
+                                        <div id="phoneVal" >
+											<input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+											<span id="phoneNumberVal" class="validity">Format: 123-456-7890</span>
+										</div>
                                     </div>
                                 </div>
                                 
