@@ -212,13 +212,13 @@ button:disabled {
 	/* height: 50px; */
 }
 
+/* password error msg */
+
 .pass-confirm {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/* password error msg */
 
 #usrPwd {
 	display: flex;

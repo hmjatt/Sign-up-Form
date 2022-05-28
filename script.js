@@ -1,9 +1,25 @@
 // Sign-up Form
 
 const submit = document.getElementById('submitBtn');
-
-
 submit.disabled = true;
+// get all input elements
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach(input => {
+	input.addEventListener('keyup', (a) => {
+		enableSubmit();
+	});
+});
+
+
+//if all input is valid, enable submit button
+function enableSubmit() {
+	if (firstName.validity.valid && lastName.validity.valid && phone.validity.valid && pass.validity.valid && email.validity.valid && confirmPass.validity.valid) {
+		submit.disabled = false;
+	} else {
+		submit.disabled = true;
+	}
+}
 
 
 
@@ -25,17 +41,17 @@ email.addEventListener('input', function (event) {
 	// Each time the user types something, we check if the
 	// form fields are valid.
 
-	// error.style.display = 'block';
 	// If the email field is empty, show the error message
 
 	if (email.validity.valid) {
 		// In case there is an error message visible, if the field
 		// is valid, we remove the error message.
-		emailError.textContent = email.validationMessage; // Reset the content of the message
+		// emailError.innerText = email.validationMessage; // Reset the content of the message
 		// emailError.className = 'error'; // Reset the visual state of the message
-		error.innerText = email.validationMessage;
+		error.innerText = "Valid E-mail Address";
 		error.classList.remove('invalid');
 		error.classList.add('valid');
+
 	} else {
 		// If there is still an error, show the correct error
 		showError();
@@ -47,6 +63,7 @@ form.addEventListener('submit', function (event) {
 	event.preventDefault();
 
 	if (!email.validity.valid) {
+		submit.disabled = true;
 		// If it isn't, we display an appropriate error message
 		showError();
 		// Then we prevent the form from being sent by canceling the event
@@ -73,16 +90,12 @@ function showError() {
 	emailError.className = 'error active';
 	error.classList.add('invalid');
 	error.classList.remove('valid');
-	submit.disabled = true;
+	
 
 }
 
 
-
 // for password validation
-
-
-
 const myInput = document.getElementById("user_password");
 const letter = document.getElementById("letter");
 const capital = document.getElementById("capital");
@@ -144,18 +157,13 @@ myInput.onkeyup = function () {
 
 
 // for password confirmation validation
-
-
+const pass = document.getElementById("user_password");
 const divCheckPassword = document.getElementById('divCheckPassword');
-let confirmPass = document.getElementById('user_password_confirm');
+const confirmPass = document.getElementById('user_password_confirm');
 
-
-
-
-// document.getElementById("submitBtn").prop('disabled' , true);
 confirmPass.addEventListener('keyup', (e) => {
-    let password = document.getElementById("user_password").value;
-    let confirmPassword = document.getElementById("user_password_confirm").value;
+    let password = pass.value;
+    let confirmPassword = confirmPass.value;
 
     if (password != confirmPassword) {
         divCheckPassword.innerHTML = "Passwords do not match!";
@@ -166,14 +174,12 @@ confirmPass.addEventListener('keyup', (e) => {
         divCheckPassword.innerHTML = "Passwords match.";
 		divCheckPassword.classList.remove("invalid");
 		divCheckPassword.classList.add("valid");
-        submit.disabled = false;
     }
 });
 
 
 
 //for first name, last name and phone validation 
-
 const firstName = document.getElementById('first_name');
 const firstNameVal = document.getElementById('firstNameVal');
 const lastName = document.getElementById('last_name');
@@ -182,6 +188,8 @@ const phone = document.getElementById('phone_number');
 const phoneNumberVal = document.getElementById('phoneNumberVal');
 
 function validateForm() {
+	
+
 	firstNameVal.innerText = firstName.validationMessage;
 	firstNameVal.classList.remove("valid");
 	firstNameVal.classList.add("invalid");
@@ -205,7 +213,6 @@ function validateForm() {
 			firstNameVal.classList.remove("invalid");
 			firstNameVal.classList.add("valid");
 			firstNameVal.style.color = 'green';
-			// firstNameVal.className = 'error'; // Reset the visual state of the message
 		} else {
 			// If there is still an error, show the correct error
 			firstNameVal.innerHTML = firstName.validationMessage;
@@ -259,7 +266,6 @@ function validateForm() {
 			submit.disabled = true;
 		}
 	});
-
 }
 
 validateForm();
