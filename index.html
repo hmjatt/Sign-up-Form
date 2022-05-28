@@ -67,8 +67,9 @@
                                 <div class="pass-confirm">
                                     <div class="spacing" id="usrPwd">
                                         <div><label for="user_password">*Password:</label></div>
-                                        <div>
-										<input type="password" id="user_password" name="user_password" maxlength="128" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                        <div id="passVal">
+											<input type="password" id="user_password" name="user_password" maxlength="128" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+											<span id="userPasswordVal" class="validity"></span>
 										</div>
 
 										<div id="message">

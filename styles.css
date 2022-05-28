@@ -214,6 +214,17 @@ button:disabled {
 
 /* password error msg */
 
+#passVal {
+	display: flex;
+	flex-direction: column;
+}
+
+#userPasswordVal {
+	font-size: 13px;
+	color: rgb(185, 1, 1);
+	margin-left: 5px;
+}
+
 .pass-confirm {
     display: flex;
     justify-content: space-between;

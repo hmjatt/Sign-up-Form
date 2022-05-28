@@ -96,6 +96,12 @@ function showError() {
 
 
 // for password validation
+const pass = document.getElementById("user_password");
+const userPasswordVal = document.getElementById("userPasswordVal");
+userPasswordVal.innerText = "Please Enter a Valid Password";
+userPasswordVal.classList.add('invalid');
+userPasswordVal.classList.remove('valid');
+
 const myInput = document.getElementById("user_password");
 const letter = document.getElementById("letter");
 const capital = document.getElementById("capital");
@@ -153,11 +159,26 @@ myInput.onkeyup = function () {
 		length.classList.add("invalid");
 	}
 
+	if(pass.validity.valid){
+		// userPasswordVal.innerText = "Valid Password";
+		// userPasswordVal.classList.remove('invalid');
+		// userPasswordVal.classList.add('valid');
+		passIsValid();
+	}
+
+}
+
+
+
+function passIsValid() {
+	userPasswordVal.innerText = "Valid Password";
+	userPasswordVal.classList.remove('invalid');
+	userPasswordVal.classList.add('valid');
+	userPasswordVal.style.color = "green";
 }
 
 
 // for password confirmation validation
-const pass = document.getElementById("user_password");
 const divCheckPassword = document.getElementById('divCheckPassword');
 const confirmPass = document.getElementById('user_password_confirm');
 
