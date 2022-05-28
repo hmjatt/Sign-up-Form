@@ -160,15 +160,10 @@ myInput.onkeyup = function () {
 	}
 
 	if(pass.validity.valid){
-		// userPasswordVal.innerText = "Valid Password";
-		// userPasswordVal.classList.remove('invalid');
-		// userPasswordVal.classList.add('valid');
 		passIsValid();
 	}
 
 }
-
-
 
 function passIsValid() {
 	userPasswordVal.innerText = "Valid Password";
@@ -181,10 +176,16 @@ function passIsValid() {
 // for password confirmation validation
 const divCheckPassword = document.getElementById('divCheckPassword');
 const confirmPass = document.getElementById('user_password_confirm');
+const confirmPassVal = document.getElementById('confirmPassVal');
+const userPasswordConfirmVal = document.getElementById('userPasswordConfirmVal');
+userPasswordConfirmVal.innerText = "Please Confirm Password";
+userPasswordConfirmVal.classList.add('invalid');
+userPasswordConfirmVal.classList.remove('valid');
 
 confirmPass.addEventListener('keyup', (e) => {
     let password = pass.value;
     let confirmPassword = confirmPass.value;
+	userPasswordConfirmVal.style.display = "none";
 
     if (password != confirmPassword) {
         divCheckPassword.innerHTML = "Passwords do not match!";
@@ -192,7 +193,7 @@ confirmPass.addEventListener('keyup', (e) => {
 		divCheckPassword.classList.add("invalid");
 		submit.disabled = true;
     } else {
-        divCheckPassword.innerHTML = "Passwords match.";
+        divCheckPassword.innerHTML = "Password Confirmed";
 		divCheckPassword.classList.remove("invalid");
 		divCheckPassword.classList.add("valid");
     }

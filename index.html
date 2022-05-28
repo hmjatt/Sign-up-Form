@@ -83,7 +83,10 @@
                                     </div>
                                     <div class="spacing">
                                         <div><label for="user_password_confirm">*Confirm Password:</label></div>
-                                        <div><input type="password" id="user_password_confirm" maxlength="128" name="user_password_confirm" required></div>
+                                        <div id="confirmPassVal">
+											<input type="password" id="user_password_confirm" maxlength="128" name="user_password_confirm" required>
+											<span id="userPasswordConfirmVal" class="validity"></span>
+										</div>
 										<div id="divCheckPassword"></div>
                                     </div>
                                 </div>
