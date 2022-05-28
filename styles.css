@@ -32,7 +32,7 @@ body {
 
 .left {
     width: 20px;
-    height: 840px;
+    height: 900px;
     background-color:  rgb(4, 116, 97);
 }
 
@@ -41,14 +41,12 @@ body {
 .content-div {
     display: flex;
     flex-direction: column;
-    height: 840px;
+    height: 900px;
     padding-left: 50px;
     padding-right: 100px;
     background-color: rgb(248, 248, 248);
     transition: 0.5s;
 }
-
-
 
 
 .logo-img {
@@ -61,6 +59,8 @@ body {
 .content {
     padding-left: 50px;
     font-family: 'Space Mono', monospace;
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -104,7 +104,7 @@ input:invalid {
 }
 
 button {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     height: 70px;
     width: 230px;
@@ -115,13 +115,19 @@ button {
     font-family: 'Space Mono', monospace;
     font-size: 22px;
 }
+
+button:disabled {
+	background-color: rgba(4, 116, 97, 0.171);
+	color: rgb(255, 255, 255);
+}
+
 .form-div {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     margin-top: 20px;
 }
 
-#first_name, #email, #user_password {
+#first_name, #mail, #user_password {
     margin-right: 80px;
     transition: 0.3s;
 }
@@ -138,24 +144,143 @@ button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
-
 }
+
+
+/* for first and last name */
+
+#first_name, #last_name {
+	display: flex;
+	flex-direction: column;
+}
+
+#firstNameVal, #lastNameVal {
+	font-size: 13px;
+	color: rgb(185, 1, 1);
+	margin-left: 5px;
+}
+
+
+
 .email-phone {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-   
-
 }
 
+/* for phone */
+
+.validity {
+	font-size: 13px;
+	margin-top: 5px;
+	/* margin-left: 5px; */
+}
+
+#phoneVal {
+	display: flex;
+	flex-direction: column;
+}
+
+#phoneVal input:invalid+span:before {
+	content: "✖";
+	padding-right: 5px;
+	color: rgb(185, 1, 1);
+}
+
+#phoneVal input:valid+span:before {
+	content: "✔";
+	padding-right: 5px;
+	color: #009000;
+}
+
+/* for email */
+
+.error {
+	/* display: none; */
+	margin-top: 5px;
+	width: 85%;
+	margin-left: 10px;
+	/* padding: 0; */
+	/* font-size: 80%; */
+	font-size: 13px;
+	color: rgb(185, 1, 1);
+}
+
+#emailVal {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* height: 50px; */
+}
+
+/* password error msg */
+
+#passVal, #confirmPassVal {
+	display: flex;
+	flex-direction: column;
+}
+
+#userPasswordVal, #userPasswordConfirmVal {
+	font-size: 13px;
+	color: rgb(185, 1, 1);
+	margin-left: 5px;
+}
 
 .pass-confirm {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+}
 
+#usrPwd {
+	display: flex;
+	flex-direction: column;
+}
+
+#pwdMsg {
+	margin: 0px;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+
+#message {
+	display: none;
+	background: rgb(248, 248, 248);
+	color: #000;
+	position: relative;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+#message p {
+	font-size: 13px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+	color: green;
+}
+
+.valid:before {
+	position: relative;
+	padding-right: 5px;
+	content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+	color: rgb(185, 1, 1);
+}
+
+.invalid:before {
+	position: relative;
+	padding-right: 5px;
+	content: "✖";
+}
+
+#divCheckPassword {
+	font-size: 13px;
+	margin-top: 5px;
 }
 
 footer {
@@ -164,7 +289,6 @@ footer {
     padding-left: 50px;
     color: rgb(126, 126, 126);
     font-family: 'Space Mono', monospace;
-    
     transition: 0.5s;
 }
 
@@ -197,7 +321,7 @@ a:hover {
 }
 
 img {
-    height: 840px;
+    height: 900px;
     width: 450px;
 
 }
@@ -219,10 +343,11 @@ img {
         width: 550px;
     }
 
-    #first_name, #email, #user_password {
+    #first_name, #mail, #user_password {
         margin-right: 10px;
 
     }
+
 }    
 
 @media only screen and (max-width: 1100px) {
@@ -240,6 +365,57 @@ img {
     html {
         height: 1225px;
     }
+	
+	.logo-img {
+		padding:  0px;
+		margin-top: 15px;
+	}
+
+	.content {
+		margin-top: 100px;
+	}
+
+}
+
+@media only screen and (max-width: 687px) {
+
+	.content-div {
+		display: flex;
+		width: 100%;
+	}
+
+	.content {
+		margin-top: 30px;
+		align-items: center;
+		/* width: 70vw; */
+	}
+
+	.first-last-name, .email-phone, .pass-confirm {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo-div {
+		display: none;
+	}
+
+	.spacing {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#emailVal {
+		align-items: center;
+	}
+
+	.error {
+		width: 100%;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -260,7 +436,6 @@ img {
     }
 
     html {
-        
         width: 100vw;
     }
     .content{

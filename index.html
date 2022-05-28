@@ -26,49 +26,77 @@
 
                 <div class="form-div">
                     <div class="form-inner-div">
-                        <form action="#" method="get">
+                        <form action="#">
                             
                             <div class="form-bg">
 
                                 <div class="first-last-name">
                                     <div class="spacing">
                                         <div><label for="first_name">First Name:</label></div>
-                                        <div><input type="text" name="first_name" id="first_name" placeholder="John"></div>
+                                        <div>
+											<input type="text" name="first_name" id="first_name" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$" maxlength="128" minlength="1" placeholder="John" required>
+											<span id="firstNameVal"></span>
+										</div>
                                     </div>
                                     <div class="spacing">
                                         <div><label for="last_name">Last Name:</label></div>
-                                        <div><input type="text" name="last_name" id="last_name" placeholder="Doe"></div>
+                                        <div>
+											<input type="text" name="last_name" id="last_name" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$" maxlength="128"  minlength="1" placeholder="Doe" required>
+											<span id="lastNameVal"></span>
+										</div>
                                     </div>
                                 </div>
                                 <div class="email-phone">
                                     <div class="spacing">
-                                        <div><label for="email">Email:</label></div>
-                                        <div><input type="email" id="email" name="email" placeholder="example@example.com"></div>
+                                        <div><label for="mail">Email:</label></div>
+                                        <div id="emailVal">
+											<input type="email" id="mail" name="mail" required minlength="8" maxlength="128" placeholder="example@example.com">
+											<span class="error" id="error" aria-live="polite"></span>
+										</div>
                                     </div>
-                                    <div class="spacing">
+                                    <div class="spacing" >
                                         <div><label for="phone_number">Phone Number:</label></div>
-                                        <div><input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"></div>
+                                        <div id="phoneVal" >
+											<input type="tel" id="phone_number" name="phone_number" pattern="^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]{8,14}$" placeholder="123-456-7890" required>
+											<span id="phoneNumberVal" class="validity"></span>
+										</div>
                                     </div>
                                 </div>
                                 
                             
                                 <div class="pass-confirm">
-                                    <div class="spacing">
+                                    <div class="spacing" id="usrPwd">
                                         <div><label for="user_password">*Password:</label></div>
-                                        <div><input type="password" id="user_password" name="user_password" required></div>
+                                        <div id="passVal">
+											<input type="password" id="user_password" name="user_password" maxlength="128" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+											<span id="userPasswordVal" class="validity"></span>
+										</div>
+
+										<div id="message">
+											<h3 id="pwdMsg">Password must contain the following:</h3>
+											<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+											<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+											<p id="number" class="invalid">A <b>number</b></p>
+											<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+										</div>
+
                                     </div>
                                     <div class="spacing">
                                         <div><label for="user_password_confirm">*Confirm Password:</label></div>
-                                        <div><input type="password" id="user_password_confirm" name="user_password_confirm" required></div>
+                                        <div id="confirmPassVal">
+											<input type="password" id="user_password_confirm" maxlength="128" name="user_password_confirm" required>
+											<span id="userPasswordConfirmVal" class="validity"></span>
+										</div>
+										<div id="divCheckPassword"></div>
                                     </div>
                                 </div>
 
                             </div>
             
-                            
+							
 
                             <div>
-                                <button type="submit">Create Account</button>
+                                <button id="submitBtn" type="submit" onclick="return false">Create Account</button>
                             </div>
                         </form>
                     </div>
