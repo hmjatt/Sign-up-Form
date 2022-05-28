@@ -31,6 +31,7 @@ email.addEventListener('input', function (event) {
 
 form.addEventListener('submit', function (event) {
 	// if the form contains valid data, we let it submit
+	event.preventDefault();
 
 	if (!email.validity.valid) {
 		// If it isn't, we display an appropriate error message
@@ -123,3 +124,32 @@ myInput.onkeyup = function () {
 		length.classList.add("invalid");
 	}
 }
+
+
+// for password confirmation validation
+
+const submit = document.getElementById('submitBtn');
+const divCheckPassword = document.getElementById('divCheckPassword');
+let confirmPass = document.getElementById('user_password_confirm');
+
+
+submit.disabled = true;
+
+// document.getElementById("submitBtn").prop('disabled' , true);
+confirmPass.addEventListener('keyup', (e) => {
+    let password = document.getElementById("user_password").value;
+    let confirmPassword = document.getElementById("user_password_confirm").value;
+
+    if (password != confirmPassword) {
+        divCheckPassword.innerHTML = "Passwords do not match!";
+		divCheckPassword.classList.remove("valid");
+		divCheckPassword.classList.add("invalid");
+		submit.disabled = true;
+    } else {
+        divCheckPassword.innerHTML = "Passwords match.";
+		divCheckPassword.classList.remove("invalid");
+		divCheckPassword.classList.add("valid");
+        submit.disabled = false;
+    }
+});
+
