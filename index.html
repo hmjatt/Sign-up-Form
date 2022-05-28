@@ -57,8 +57,8 @@
                                     <div class="spacing" >
                                         <div><label for="phone_number">Phone Number:</label></div>
                                         <div id="phoneVal" >
-											<input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
-											<span id="phoneNumberVal" class="validity">Format: 123-456-7890</span>
+											<input type="tel" id="phone_number" name="phone_number" pattern="^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]{8,14}$" placeholder="123-456-7890" required>
+											<span id="phoneNumberVal" class="validity"></span>
 										</div>
                                     </div>
                                 </div>

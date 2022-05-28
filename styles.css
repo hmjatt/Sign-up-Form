@@ -155,7 +155,7 @@ button:disabled {
 }
 
 #firstNameVal, #lastNameVal {
-	font-size: 12px;
+	font-size: 13px;
 	color: rgb(185, 1, 1);
 	margin-left: 5px;
 }
@@ -172,6 +172,7 @@ button:disabled {
 
 .validity {
 	font-size: 13px;
+	margin-top: 5px;
 	/* margin-left: 5px; */
 }
 
@@ -195,19 +196,20 @@ button:disabled {
 /* for email */
 
 .error {
-	display: none;
-	margin-top: 10px;
+	/* display: none; */
+	margin-top: 5px;
 	width: 85%;
-	padding: 0;
-	font-size: 80%;
+	/* padding: 0; */
+	/* font-size: 80%; */
+	font-size: 13px;
 	color: rgb(185, 1, 1);
 }
 
 #emailVal {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	height: 50px;
+	/* align-items: center; */
+	/* height: 50px; */
 }
 
 .pass-confirm {

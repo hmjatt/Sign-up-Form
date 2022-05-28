@@ -1,8 +1,9 @@
 // Sign-up Form
 
+const submit = document.getElementById('submitBtn');
 
 
-
+submit.disabled = true;
 
 
 
@@ -16,18 +17,25 @@ const email = document.getElementById('mail');
 const error = document.getElementById('error');
 const emailError = document.querySelector('#mail + span.error');
 
+error.innerText = email.validationMessage;
+error.classList.add('invalid');
+error.classList.remove('valid');
+
 email.addEventListener('input', function (event) {
 	// Each time the user types something, we check if the
 	// form fields are valid.
 
-	error.style.display = 'block';
+	// error.style.display = 'block';
 	// If the email field is empty, show the error message
 
 	if (email.validity.valid) {
 		// In case there is an error message visible, if the field
 		// is valid, we remove the error message.
-		emailError.innerHTML = ''; // Reset the content of the message
-		emailError.className = 'error'; // Reset the visual state of the message
+		emailError.textContent = email.validationMessage; // Reset the content of the message
+		// emailError.className = 'error'; // Reset the visual state of the message
+		error.innerText = email.validationMessage;
+		error.classList.remove('invalid');
+		error.classList.add('valid');
 	} else {
 		// If there is still an error, show the correct error
 		showError();
@@ -63,6 +71,9 @@ function showError() {
 
 	// Set the styling appropriately
 	emailError.className = 'error active';
+	error.classList.add('invalid');
+	error.classList.remove('valid');
+	submit.disabled = true;
 
 }
 
@@ -128,17 +139,18 @@ myInput.onkeyup = function () {
 		length.classList.remove("valid");
 		length.classList.add("invalid");
 	}
+
 }
 
 
 // for password confirmation validation
 
-const submit = document.getElementById('submitBtn');
+
 const divCheckPassword = document.getElementById('divCheckPassword');
 let confirmPass = document.getElementById('user_password_confirm');
 
 
-submit.disabled = true;
+
 
 // document.getElementById("submitBtn").prop('disabled' , true);
 confirmPass.addEventListener('keyup', (e) => {
@@ -166,8 +178,8 @@ const firstName = document.getElementById('first_name');
 const firstNameVal = document.getElementById('firstNameVal');
 const lastName = document.getElementById('last_name');
 const lastNameVal = document.getElementById('lastNameVal');
-// const phone = document.getElementById('phone_number');
-// const phoneNumberVal = document.getElementById('phoneNumberVal');
+const phone = document.getElementById('phone_number');
+const phoneNumberVal = document.getElementById('phoneNumberVal');
 
 function validateForm() {
 	firstNameVal.innerText = firstName.validationMessage;
@@ -177,6 +189,10 @@ function validateForm() {
 	lastNameVal.innerText = lastName.validationMessage;
 	lastNameVal.classList.remove("valid");
 	lastNameVal.classList.add("invalid");
+
+	phoneNumberVal.innerText = phone.validationMessage;
+	phoneNumberVal.classList.remove("valid");
+	phoneNumberVal.classList.add("invalid");
 
 	firstName.addEventListener('input', function (event) {
 		// Each time the user types something, we check if the
@@ -196,6 +212,7 @@ function validateForm() {
 			firstNameVal.classList.remove("valid");
 			firstNameVal.classList.add("invalid");
 			firstNameVal.style.color = 'rgb(185, 1, 1)';
+			submit.disabled = true;
 		}
 	});
 
@@ -217,25 +234,32 @@ function validateForm() {
 			lastNameVal.classList.remove("valid");
 			lastNameVal.classList.add("invalid");
 			lastNameVal.style.color = 'rgb(185, 1, 1)';
+			submit.disabled = true;
 		}
 	});
 
+	phone.addEventListener('input', function (event) {
+		// Each time the user types something, we check if the
+		// form fields are valid.
 
+		if (phone.validity.valid) {
+			// In case there is an error message visible, if the field
+			// is valid, we remove the error message.
+			phoneNumberVal.innerHTML = 'Valid Phone Number'; // Reset the content of the message
+			phoneNumberVal.classList.remove("invalid");
+			phoneNumberVal.classList.add("valid");
+			phoneNumberVal.style.color = 'green';
 
-	// if (firstName.validity.valid || lastName.validity.valid) {
-	// 	firstNameVal.classList.remove('invalid');
-	// 	firstNameVal.classList.add('valid');
-	// 	lastNameVal.classList.remove('invalid');
-	// 	lastNameVal.classList.add('valid');
-	// 	submit.disabled = false;
-	// 	// return true;
-	// }
-		
-	
+		} else {
+			// If there is still an error, show the correct error
+			phoneNumberVal.innerHTML = phone.validationMessage;
+			phoneNumberVal.classList.remove("valid");
+			phoneNumberVal.classList.add("invalid");
+			phoneNumberVal.style.color = 'rgb(185, 1, 1)';
+			submit.disabled = true;
+		}
+	});
 
-	// console.log(firstName.checkValidity());
-	// phoneNumberVal.innerText = phone.validationMessage;
-	// error.innerText = email.validationMessage;
 }
 
 validateForm();
