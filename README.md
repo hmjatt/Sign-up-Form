@@ -1,7 +1,7 @@
 # Sign-up Form
 
 
-![This is an image](https://raw.githubusercontent.com/hmjatt/Sign-up-Form/main/images/sign-up-form-screenshot.png)
+![This is an image](https://raw.githubusercontent.com/hmjatt/Sign-up-Form/main/images/validated.png)
 
 [Live Demo](https://hmjatt.github.io/Sign-up-Form/)
 
