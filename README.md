@@ -15,13 +15,14 @@ A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://
 
 1. Form Validation with JavaScript
 
-2. Custom error messages
+2. Custom error messages with validation
 
 3. Password and Confirm Password validation with custom error message
 
-4. Email validation with custom error message
+4. REGEX validation for Name, Phone, Email, Password, Confirm Password
 
 5. Min & Max Length validation for Name, Email, Password, Confirm Password
+
 
 
 ### Links to content that helped me with this project
@@ -38,6 +39,7 @@ A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://
 
 5. Stack Overflow
 	- [List of standard lengths for database fields](https://stackoverflow.com/questions/20958/list-of-standard-lengths-for-database-fields)
+	- [Validating First and Last Name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name)
 
 
 #### Quote
