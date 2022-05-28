@@ -199,6 +199,7 @@ button:disabled {
 	/* display: none; */
 	margin-top: 5px;
 	width: 85%;
+	margin-left: 10px;
 	/* padding: 0; */
 	/* font-size: 80%; */
 	font-size: 13px;
@@ -376,10 +377,45 @@ img {
 
 }
 
-@media only screen and (max-width: 685px) {
-	.content {
-		margin-top: 0;
+@media only screen and (max-width: 687px) {
+
+	.content-div {
+		display: flex;
+		width: 100%;
 	}
+
+	.content {
+		margin-top: 30px;
+		align-items: center;
+		/* width: 70vw; */
+	}
+
+	.first-last-name, .email-phone, .pass-confirm {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo-div {
+		display: none;
+	}
+
+	.spacing {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#emailVal {
+		align-items: center;
+	}
+
+	.error {
+		width: 100%;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
