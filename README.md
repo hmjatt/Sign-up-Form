@@ -1,9 +1,9 @@
 # Sign-up Form
 
+## [Live Demo](https://hmjatt.github.io/Sign-up-Form/)
 
 ![This is an image](https://raw.githubusercontent.com/hmjatt/Sign-up-Form/main/images/validated.png)
 
-[Live Demo](https://hmjatt.github.io/Sign-up-Form/)
 
 A responsive sign-up form. Feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
 
