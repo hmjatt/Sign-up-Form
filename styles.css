@@ -8,14 +8,11 @@ html {
 }
 
 body {
-
     background-color: #2d3436;
     background-image: linear-gradient(to bottom right, rgb(249 250 250), rgb(129 136 144));
     display: flex;
     flex-direction: column;
-
 }
-
 
 .sign-up-div {
     display: flex;
@@ -36,8 +33,6 @@ body {
     background-color:  rgb(4, 116, 97);
 }
 
-
-
 .content-div {
     display: flex;
     flex-direction: column;
@@ -47,7 +42,6 @@ body {
     background-color: rgb(248, 248, 248);
     transition: 0.5s;
 }
-
 
 .logo-img {
     height: 70px;
@@ -146,7 +140,6 @@ button:disabled {
     flex-wrap: wrap;
 }
 
-
 /* for first and last name */
 
 #first_name, #last_name {
@@ -159,8 +152,6 @@ button:disabled {
 	color: rgb(185, 1, 1);
 	margin-left: 5px;
 }
-
-
 
 .email-phone {
     display: flex;
@@ -317,13 +308,11 @@ a:hover {
 
 .right {
     display: flex;
-
 }
 
 img {
     height: 900px;
     width: 450px;
-
 }
 
 
@@ -359,9 +348,11 @@ img {
         height: 1100px;
         padding-right: 50px;
     }
+	
     .left {
         height: 1100px;
     }
+	
     html {
         height: 1225px;
     }
@@ -374,11 +365,9 @@ img {
 	.content {
 		margin-top: 100px;
 	}
-
 }
 
 @media only screen and (max-width: 687px) {
-
 	.content-div {
 		display: flex;
 		width: 100%;
@@ -415,22 +404,19 @@ img {
 	.error {
 		width: 100%;
 	}
-
 }
 
 @media only screen and (max-width: 600px) {
-
     footer {
         width: 375px;
     }
 }
 
 @media only screen and (max-width: 430px) {
-
-
     footer {
         padding:0px;
     }
+	
     .content-div {
         padding-right: 0px;
     }
@@ -438,9 +424,11 @@ img {
     html {
         width: 100vw;
     }
+	
     .content{
         padding-left: 40px;
     }
+	
     button {
         margin-left: 10px;
     }
@@ -448,7 +436,7 @@ img {
     .have-account {
         margin-left: -15px;
     }
-
+	
     .copyright, .attribute {
         padding-left: 30px;
     }
